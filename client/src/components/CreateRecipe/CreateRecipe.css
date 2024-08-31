@@ -1,0 +1,72 @@
+form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+form div {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+form textarea {
+  resize: none;
+}
+
+form input[type="text"],
+form textarea,
+form select,
+form input[type="file"] {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+form input[type="text"]:focus,
+form textarea:focus,
+form input[type="file"]:focus {
+    border-color: #1abc9c;
+}
+
+form select:focus {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ccc;
+}
+
+form button {
+  background-color: #1abc9c;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background-color: #147561;
+}
+
+@media (max-width: 480px) {
+  form input[type="text"],
+  form textarea,
+  form select,
+  form input[type="file"] {
+    font-size: 0.85rem;
+  }
+}
