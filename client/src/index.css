@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
 * {
   margin: 0;
@@ -9,6 +9,6 @@
 body {
   background-color: #f4f4f9;
   color: #333;
-  font-family: 'Poppins', Inter, system-ui, Avenir, Helvetica, 'Roboto', Arial, sans-serif;
+  font-family: "Poppins", Inter, system-ui, Avenir, Helvetica, "Roboto", Arial, sans-serif;
   line-height: 1.6;
 }

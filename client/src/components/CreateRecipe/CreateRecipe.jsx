@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import './CreateRecipe.css';
 
+const API_BASE_URL = 'http://localhost:5000';
+
 function CreateRecipe() {
     const [title, setTitle] = useState('');
     const [ingredients, setIngredients] = useState('');
@@ -32,7 +34,7 @@ function CreateRecipe() {
         }
 
         try {
-            await axios.post('http://localhost:5000/api/recipes', formData, {
+            await axios.post(`${API_BASE_URL}/api/recipes`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                 },

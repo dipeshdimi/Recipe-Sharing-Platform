@@ -36,12 +36,12 @@ form input[type="file"] {
 form input[type="text"]:focus,
 form textarea:focus,
 form input[type="file"]:focus {
-    border-color: #1abc9c;
+  border-color: #1abc9c;
 }
 
 form select:focus {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #ccc;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ccc;
 }
 
 form button {

@@ -8,7 +8,7 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <img src='/background.jpg' alt='Background Image' className='background'/>
+                <img src='/background.jpg' alt='Background Image' className='background' />
                 <Routes>
                     <Route path="/" element={<RecipeList />} />
                     <Route path="/recipes/:id" element={<RecipeDetails />} />

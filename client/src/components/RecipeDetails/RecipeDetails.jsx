@@ -3,12 +3,14 @@ import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import './RecipeDetails.css';
 
+const API_BASE_URL = 'http://localhost:5000';
+
 function RecipeDetails() {
     const { id } = useParams();
     const [recipe, setRecipe] = useState(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/api/recipes/${id}`)
+        axios.get(`${API_BASE_URL}/api/recipes/${id}`)
             .then(response => setRecipe(response.data))
             .catch(error => console.error(error));
     }, [id]);
@@ -28,7 +30,7 @@ function RecipeDetails() {
             <p className='recipe-details-para'><strong>Instructions:&ensp;</strong>{recipe.instructions}</p>
             {recipe.image && (
                 <img
-                    src={`http://localhost:5000/${recipe.image}`}
+                    src={`${API_BASE_URL}/${recipe.image}`}
                     alt={recipe.title}
                     className="recipe-image"
                 />

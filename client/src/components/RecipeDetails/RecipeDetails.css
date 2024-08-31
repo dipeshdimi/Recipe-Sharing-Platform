@@ -1,37 +1,36 @@
 .recipe-details {
-    background-color: #fff;
-    min-height: 100dvh;
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  background-color: #fff;
+  min-height: 100dvh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .recipe-details-para {
-    color: #333;
-    margin: 0.5% 0;
+  color: #333;
+  margin: 0.5% 0;
 }
 
 .recipe-image {
-    margin-top: 1.5%;
-    border-radius: 10px;
+  margin-top: 1.5%;
+  border-radius: 10px;
 }
 
-
 @media (max-width: 768px) {
-    .recipe-details {
-        background-image: url('https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1725062400&semt=ais_hybrid');
-        background-position: center;
-        background-size: cover;
-    }
+  .recipe-details {
+    background-image: url("https://img.freepik.com/free-photo/vegetables-set-left-black-slate_1220-685.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1725062400&semt=ais_hybrid");
+    background-position: center;
+    background-size: cover;
+  }
 
-    .recipe-details-para {
-        color: #d7d7d7;
-    }
+  .recipe-details-para {
+    color: #d7d7d7;
+  }
 }
 
 @media (max-width: 480px) {
-    .recipe-details-para {
-        font-size: 0.85rem;
-    }
+  .recipe-details-para {
+    font-size: 0.85rem;
+  }
 }

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './RecipeList.css';
 
+const API_BASE_URL = 'http://localhost:5000';
+
 function RecipeList() {
     const [recipes, setRecipes] = useState([]);
     const [filteredRecipes, setFilteredRecipes] = useState([]);
@@ -11,7 +13,7 @@ function RecipeList() {
     const categoryList = ['Main Course', 'Appetizer', 'Soup', 'Salad', 'Side Dish', 'Dessert'];
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/recipes')
+        axios.get(`${API_BASE_URL}/api/recipes`)
             .then(response => {
                 setRecipes(response.data);
                 setFilteredRecipes(response.data);
@@ -23,9 +25,9 @@ function RecipeList() {
         const lowerCaseQuery = searchQuery.toLowerCase();
         const filtered = recipes.filter(recipe =>
             (recipe.title.toLowerCase().includes(lowerCaseQuery) ||
-            recipe.category.toLowerCase().includes(lowerCaseQuery))
+                recipe.category.toLowerCase().includes(lowerCaseQuery))
             &&
-            (recipe.category === (selectedCategory) || selectedCategory==='')
+            (recipe.category === (selectedCategory) || selectedCategory === '')
         );
         setFilteredRecipes(filtered);
     }, [searchQuery, recipes, selectedCategory]);
@@ -43,11 +45,11 @@ function RecipeList() {
                     className="search-input"
                     placeholder="Search by title or category..."
                     value={searchQuery}
-                    onChange={ (event) => setSearchQuery(event.target.value) }
+                    onChange={(event) => setSearchQuery(event.target.value)}
                 />
                 <select
                     value={selectedCategory}
-                    onChange={ (event) => setSelectedCategory(event.target.value)}
+                    onChange={(event) => setSelectedCategory(event.target.value)}
                     className='filter'
                 >
                     <option value="">All Categories</option>
@@ -61,7 +63,7 @@ function RecipeList() {
             <div className="recipe-grid">
                 {filteredRecipes.map(recipe => (
                     <Link to={`/recipes/${recipe._id}`} key={recipe._id} className="recipe-card">
-                        <img src={`http://localhost:5000/${recipe.image}`} alt={recipe.title} />
+                        <img src={`${API_BASE_URL}/${recipe.image}`} alt={recipe.title} />
                         <div className="recipe-content">
                             <h2>{recipe.title}</h2>
                             <p className="recipe-category">{recipe.category}</p>
