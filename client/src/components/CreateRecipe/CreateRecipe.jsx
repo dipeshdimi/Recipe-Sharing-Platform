@@ -4,7 +4,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import './CreateRecipe.css';
 
 // const API_BASE_URL = 'http://localhost:5000';
-const API_BASE_URL = 'hhttps://recipe-sharing-platform-75ho.onrender.com';
+const API_BASE_URL = 'https://recipe-sharing-platform-75ho.onrender.com';
 
 function CreateRecipe() {
     const [title, setTitle] = useState('');
@@ -42,7 +42,7 @@ function CreateRecipe() {
             });
             navigate('/');
         } catch (error) {
-            console.error('There was an error uploading the recipe:', error.response.data);
+            console.error('There was an error uploading the recipe:', error);
         }
     };
 
