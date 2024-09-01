@@ -47,11 +47,13 @@ function RecipeList() {
                     placeholder="Search by title or category..."
                     value={searchQuery}
                     onChange={(event) => setSearchQuery(event.target.value)}
+                    name='text'
                 />
                 <select
                     value={selectedCategory}
                     onChange={(event) => setSelectedCategory(event.target.value)}
                     className='filter'
+                    name='filter'
                 >
                     <option value="">All Categories</option>
                     {categoryList.map((category) => (

@@ -55,8 +55,9 @@ function CreateRecipe() {
             </div>
             <form onSubmit={handleSubmit} encType="multipart/form-data">
                 <div>
-                    <label>Title:</label>
+                    <label htmlFor='title'>Title:</label>
                     <input
+                        id='title'
                         type="text"
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
@@ -64,8 +65,9 @@ function CreateRecipe() {
                     />
                 </div>
                 <div>
-                    <label>Ingredients (comma-separated):</label>
+                    <label htmlFor='ingredients'>Ingredients (comma-separated):</label>
                     <input
+                        id='ingredients'
                         type="text"
                         value={ingredients}
                         onChange={(e) => setIngredients(e.target.value)}
@@ -73,16 +75,18 @@ function CreateRecipe() {
                     />
                 </div>
                 <div>
-                    <label>Instructions:</label>
+                    <label htmlFor='instructions'>Instructions:</label>
                     <textarea
+                        id='instructions'
                         value={instructions}
                         onChange={(e) => setInstructions(e.target.value)}
                         required
                     />
                 </div>
                 <div>
-                    <label>Category:</label>
+                    <label htmlFor='category'>Category:</label>
                     <select
+                        id='category'
                         value={category}
                         onChange={(e) => setCategory(e.target.value)}
                         required
@@ -97,8 +101,9 @@ function CreateRecipe() {
                     </select>
                 </div>
                 <div>
-                    <label>Image:</label>
+                    <label htmlFor='image'>Image:</label>
                     <input
+                        id='image'
                         type="file"
                         onChange={handleImageChange}
                     />
