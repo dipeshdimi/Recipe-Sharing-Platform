@@ -92,12 +92,12 @@ function CreateRecipe() {
                         required
                     >
                         <option value="" disabled>Select a Category</option>
-                        <option value="main-course">Main Course</option>
-                        <option value="appetizer">Appetizer</option>
-                        <option value="soup">Soup</option>
-                        <option value="salad">Salad</option>
-                        <option value="side-dish">Side Dish</option>
-                        <option value="dessert">Dessert</option>
+                        <option value="Main Course">Main Course</option>
+                        <option value="Appetizer">Appetizer</option>
+                        <option value="Soup">Soup</option>
+                        <option value="Salad">Salad</option>
+                        <option value="Side Dish">Side Dish</option>
+                        <option value="Dessert">Dessert</option>
                     </select>
                 </div>
                 <div>
