@@ -3,7 +3,8 @@ import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import './CreateRecipe.css';
 
-const API_BASE_URL = 'http://localhost:5000';
+// const API_BASE_URL = 'http://localhost:5000';
+const API_BASE_URL = 'hhttps://recipe-sharing-platform-75ho.onrender.com';
 
 function CreateRecipe() {
     const [title, setTitle] = useState('');
